@@ -41,6 +41,9 @@ class Card extends Component {
 
     handleFormSubmit(event) {
         event.preventDefault()
+        if(this.state.contentVisible) {
+            this.setState(INITIAL_STATE);
+        }
         this.setState({contentVisible: !this.state.contentVisible })
     }
     render() {
