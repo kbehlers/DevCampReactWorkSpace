@@ -7,7 +7,47 @@
 
 
 .header {
-    align-self: center; 
+    align-self: center;
+    font-family: "Montserrat";
+    color: white;
+    text-align: center;
+    &__skew {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+
+        z-index: -10;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 110vh;
+        width: 100vw;
+        background-color: #444444;
+    }
+    &__border {
+        -webkit-clip-path: polygon(0 49%, 100% 24%, 100% 25%, 0 50%);
+        clip-path: polygon(0 48%, 100% 23%, 100% 25%, 0 50%);
+        
+        z-index: -10;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 110vh;
+        width: 100vw;
+        background-color: #00cb79;
+    }
+    h1 {
+        
+        font-size: 36px;
+        font-weight: 500px;
+        line-height: 44px;
+     }
+    p {
+        color: rgba(255,255,255,.75);
+        font-size: 15px;
+        font-weight: 300px;
+        line-height: 19px;
+        width: 403px;
+    }
 }
 
 .card {
