@@ -10,7 +10,7 @@ class Content extends Component{
     }
     renderLabel(data) {
         return [
-            <span className="card__content__label">{this.count++}</span>,
+            <div className="card__content__label">{this.count++}</div>,
             <b>{data}</b>
         ]
     }
