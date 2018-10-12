@@ -3,9 +3,13 @@ import React, { Component } from 'react';
 export default class App extends Component {
   render() {
     return (
-      <div className='app'>
-        <h1>Birthday Countdown</h1>
-        <h2>React Bootstrap</h2>
+      <div className='grid'>
+        <div className="grid__skew-dark-one-box"></div>
+        <div className="grid__skew-dark-two"></div>
+        <div className="grid__skew-dark-three"></div>
+        <div className="grid__skew-light-one"></div>
+        <div className="grid__skew-light-two"></div>
+        <div className="grid__skew-light-three-box"></div>
       </div>
     );
   }
