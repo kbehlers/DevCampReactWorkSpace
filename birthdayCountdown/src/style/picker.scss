@@ -4,10 +4,11 @@
     grid-row: 2/3;
     padding-bottom: 50px;
     justify-self: center;
+    align-self: end;
     
     input {
         font-size: 80px;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: $font-roboto;
         font-weight: bold;
 
         text-align: center;
