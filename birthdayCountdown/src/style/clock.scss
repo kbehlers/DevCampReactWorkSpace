@@ -1,6 +1,6 @@
 .clock {
     grid-row: 3/4;
-    grid-column: 2/11;
+    grid-column: 2/10;
     align-self: end;
 
     background-color: $color-gray-one;
@@ -13,7 +13,7 @@
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 275px));
-    grid-column-gap: 20px;
+    grid-column-gap: 10px;
     align-items: center;
     justify-items: center;
     align-content: center;
@@ -22,22 +22,24 @@
     &__box {
         display: flex;
         flex-direction: column;
-        padding-top: 20px;
+        // padding-top: 20px;
         align-content: flex-start;
     }
 
     &__title {
         
         font-size: 22px;
-        line-height: 25px;
+        line-height: 20px;
         color: $color-yellow-one;
         font-family: $font-roboto;
+        padding-top: 27px;
     }
 
     &__amount {
         font-size: 90px;
         font-weight: bold;
-        line-height: 115px;
+        line-height: 100px;
+        padding-bottom: 10px;
         color: white;
         font-family: $font-roboto;
 
