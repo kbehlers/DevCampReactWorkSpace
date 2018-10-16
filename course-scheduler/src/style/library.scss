@@ -2,7 +2,8 @@
     grid-column: library-start/library-end;
     display: grid;
     grid-template-rows: [title-start] 100px [title-end courses-start] repeat(auto-fit, 1fr) [courses-end];
-    
+    grid-row-gap: 20px;
+
     &__title {
         // grid-row: title-start/title-end;
     }
