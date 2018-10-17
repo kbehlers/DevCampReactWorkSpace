@@ -7,7 +7,7 @@ class LibraryCourse extends Component {
     render() {
         return (
             <div className="library-course">
-                <div class="library-course__title-check">
+                <div className="library-course__title-check">
                     <label htmlFor="" className="library-course__title">Problem Solving</label>
                     {Icon("fas fa-check", 'library-course__icon')}
 
