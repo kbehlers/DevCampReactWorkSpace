@@ -27,24 +27,20 @@ class LibraryCourse extends Component {
         }
     }.bind(this);
 
-    handleCallback = function(status) {
-        if(!status){
-            document.getElementById('library-course').classList.add('library-course-selected')
-        } else {
-            document.getElementById('library-course').classList.remove('library-course-selected')
-        }
-        this.setState({status})
-    }.bind(this);
     render() {
+        let divClassName = 'library-course';
+        if(!this.state.status){
+            divClassName += ' library-course-selected'
+        }
         return (
-            <div id='library-course' className="library-course">
+            <div id='library-course' className={divClassName}>
                 <div className="library-course__title-check">
                     <label htmlFor="" className="library-course__title">{this.props.title}</label>
                     {Icon("fas fa-check", 'library-course__icon')}
 
                 </div>
                 <div className="library-course__line"></div>
-                <Arrow callback={(status) =>this.handleCallback(status)} id={this.props.id} className="library-course__arrow" />
+                <Arrow callback={(status) =>this.setState({status})} id={this.props.id} className="library-course__arrow" />
                 <Action onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course__action" />
                 {this.renderDescription()}
 

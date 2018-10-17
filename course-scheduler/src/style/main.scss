@@ -4,6 +4,7 @@
 @import 'arrow';
 @import 'schedule';
 @import 'scheduleCourse';
+@import 'addRemoveAction';
 
 .home {
     height: 100vh;
@@ -11,9 +12,7 @@
     display: grid;
     grid-template-columns: [library-start] 1fr 1fr [library-end schedule-start] 1fr [schedule-end];
     grid-template-rows: 1fr;
-
 }
-
 
 .schedule {
     grid-column: schedule-start/schedule-end;
