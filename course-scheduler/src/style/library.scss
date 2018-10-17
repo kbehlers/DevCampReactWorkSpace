@@ -4,7 +4,18 @@
     grid-template-rows: [title-start] 100px [title-end courses-start] repeat(auto-fit, 1fr) [courses-end];
     grid-row-gap: 20px;
 
+    padding-left: 100px;
+    padding-top: 100px;
+    margin-right: -50px;
+
+
     &__title {
-        // grid-row: title-start/title-end;
+        color: $color-blue;
+        font-family: $font-alegreya;
+        font-size: 34px;
+        font-weight: bold;
+
+        border-left: 2px solid $color-blue;
+        padding: 20px 40px;
     }
 }
