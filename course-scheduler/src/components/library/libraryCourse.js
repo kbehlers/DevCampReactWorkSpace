@@ -41,7 +41,7 @@ class LibraryCourse extends Component {
                 </div>
                 <div className="library-course__line"></div>
                 <Arrow callback={(status) =>this.setState({status})} id={this.props.id} className="library-course__arrow" />
-                <Action onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course__action" />
+                <Action id={this.props.id} onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course__action" />
                 {this.renderDescription()}
 
             </div>
