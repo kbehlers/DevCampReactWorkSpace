@@ -9,9 +9,10 @@
 .library-course {
     display: grid;
     grid-template-columns: 1fr 45px 58px;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 32px [line-start] 20px [line-end]  1fr;
     background-color: transparent;
-    padding: 20px 25px;
+    padding: 12px 0px 12px 25px;
+    align-items: center;
     
     &:hover {
         @include solid-course();
@@ -27,14 +28,18 @@
 
     &__line{
         grid-column: 1/-1;
-        grid-row: 1/2;
+        grid-row: line-start/line-end;
         border-bottom: 1px solid #f2f2f2;
         margin-top: 19px;
         margin-bottom: 24px;
+        padding-top: 19px;
     }
 
     &__icon {
         color: $color-blue;
+        padding-left: 16px;
+        font-size: 24px;
+
     }
     
     &__title-check {
@@ -49,11 +54,13 @@
     &__action {
         grid-row: 1/2;
         grid-column: 3/4;
+        justify-self: center;
 
     }
     &__description {
-        grid-row: 2/3;
+        grid-row: 3/4;
         grid-column: 1/-1;
+        padding-top: 24px;
 
         
         label {
