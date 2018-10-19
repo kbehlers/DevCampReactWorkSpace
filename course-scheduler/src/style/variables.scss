@@ -9,3 +9,10 @@ $color-subtle-black: #333333;
 $font-alegreya: 'Alegreya', serif;
 $font-mont: 'Montserrat', sans-serif;
 $font-lato: 'Lato', sans-serif;
+
+@mixin border-left {
+    border-left: 2px solid $color-subtle-gray;
+    padding-left: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

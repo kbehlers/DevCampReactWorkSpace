@@ -6,7 +6,7 @@ class ProgressTracker extends Component {
     render() {
         return (
             <div className='progress-tracker'>
-                <label htmlFor="" className="progress-tracker__label">Progress Tracker</label>
+                <div htmlFor="" className="progress-tracker__title">Progress Tracker</div>
                 <div className="progress-tracker__percentage">
                     {this.calculateProgress()}%
                 </div>
