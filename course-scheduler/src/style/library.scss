@@ -1,12 +1,12 @@
 .library {
     grid-column: library-start/library-end;
+    grid-row: 1/-1;
     display: grid;
     grid-template-rows: [title-start] 100px [title-end courses-start] repeat(auto-fit, 1fr) [courses-end];
     grid-row-gap: 20px;
 
     padding-left: 100px;
     padding-top: 100px;
-    margin-right: -50px;
 
 
     &__title {

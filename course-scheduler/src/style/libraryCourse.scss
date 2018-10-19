@@ -10,9 +10,9 @@
     display: grid;
     grid-template-columns: 1fr 45px 58px;
     grid-template-rows: 32px 1fr;
-    background-color: transparent;
     padding: 12px 0px 12px 25px;
     align-items: center;
+    z-index: 10;
     
     &:hover {
         @include solid-course();
