@@ -36,16 +36,15 @@ class LibraryCourse extends Component {
         if(!this.state.status){
             divClassName += ' library-course-selected'
         }
-        let height = this.state.height == 0 ? 80 : 0;
+        let height = this.state.height == 0 ? 'auto' : 0;
         
         return (
             <div id={this.id} className={divClassName}>
                 <div className="library-course__title-check">
-                    <label htmlFor="" className="library-course__title">{this.props.title}</label>
+                    <div htmlFor="" className="library-course__title">{this.props.title}</div>
                     {Icon("fas fa-check", 'library-course__icon')}
 
                 </div>
-                <div className="library-course__line"></div>
                 <Arrow callback={(status) =>this.setState({status, height})} id={this.props.id} className="library-course__arrow" />
                 <Action id={this.props.id} onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course__action" />
                 <AnimateHeight duration={300} height={this.state.height}>
