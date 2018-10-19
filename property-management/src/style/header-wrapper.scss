@@ -1,7 +1,12 @@
 .header-wrapper {
+    grid-row: header-start/header-end;
+    grid-column: content-start/content-end;
+
     display: grid;
     grid-template-columns: [header-start] 1fr [header-end];
     grid-template-rows: [title-start] 3rem [title-end subtitle-start] 2rem [subtitle-end];
+
+
 
     padding-top: 4rem;
 
