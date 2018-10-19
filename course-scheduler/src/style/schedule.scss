@@ -1,6 +1,6 @@
  .schedule {
     display:grid;
-    grid-template-rows: [space-one-start] 1fr [space-one-end title-start] 100px [title-end] repeat(5, 80px) [progress-start] 1fr [progress-end];
+    grid-template-rows: [space-one-start] 1fr [space-one-end] repeat(5, 80px) [progress-start] 1fr [progress-end];
     grid-row-gap: 22px;
 
     grid-column: schedule-start/schedule-end;
@@ -13,9 +13,11 @@
     justify-items: center;
     align-content: center;
 
-    &__title {
-        grid-row: title-start/title-end;
+    padding-top: 15%;
 
+ 
+
+    &__title {
         color: white;
         font-family: $font-alegreya;
         font-size: 20px;
