@@ -11,23 +11,25 @@ class Library extends Component {
 
     renderCourses() {
         const data = this.props.courses
-        return data.map((course, index)=> {
-            return <LibraryCourse {...course} key={index}/>
+        return data.map((course, index) => {
+            return <LibraryCourse {...course} key={index} />
         })
     }
     render() {
         return (
             <div className="library">
-            <h1 className="library__title">Course Library</h1>
-           {this.renderCourses()}
+                <div class="library__container">
+                    <h1 className="library__container__title">Course Library</h1>
+                    {this.renderCourses()}
+                </div>
             </div>
         )
     }
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
     return {
         courses: state.courses
-    };    
+    };
 }
 export default connect(mapStateToProps, actions)(Library);
