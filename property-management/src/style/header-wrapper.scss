@@ -1,0 +1,25 @@
+.header-wrapper {
+    display: grid;
+    grid-template-columns: [header-start] 1fr [header-end];
+    grid-template-rows: [title-start] 3rem [title-end subtitle-start] 2rem [subtitle-end];
+
+    padding-top: 4rem;
+
+    &__title {
+        grid-row: title-start/title-end;
+        grid-column: header-start/header-end;
+
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 3rem;
+    }
+
+    &__subtitle {
+        grid-row: subtitle-start/subtitle-end;
+        grid-column: header-start/header-end;
+
+        color: $color-red-BA;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+}
