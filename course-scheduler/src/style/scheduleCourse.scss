@@ -1,0 +1,27 @@
+.schedule-course{
+    height: 55px;
+    width: 280px;
+    background: white;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+
+    color: $color-subtle-black;
+    font-family: $font-lato;
+    font-size: 16px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: [title-start] 1fr [action-start] 32px [action-end] 12px [title-end];
+    grid-template-rows: 1fr;
+
+    justify-items: center;
+    align-items: center;
+    &__title {
+        grid-column: title-start/title-end;
+        grid-row: 1/2;
+    }
+
+    &__action {
+        grid-column: action-start/action-end;
+        grid-row: 1/2;
+    }
+}

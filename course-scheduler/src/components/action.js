@@ -20,13 +20,7 @@ class Action extends Component {
         this.id = `action-${this.props.id}`
         return (
             <a id={this.id} onClick={() => this.handleAction()} className={`${this.props.className} action`}>
-                {/* {Icon("fas fa-plus-circle")} */}
-                {/* <i class="fas fa-times-circle"></i> */}
             </a>
-            // <button onClick={() => this.props.onClick()} className={`${this.props.className} action`}>
-            //     {Icon("fas fa-plus-circle")}
-            //     {/* <i class="fas fa-times-circle"></i> */}
-            // </button>
         )
     }
 }
