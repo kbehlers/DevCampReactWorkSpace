@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { FormTitle } from '../formTitle';
-import FormInput from '../formFields';
+import {FormInput, FormButton} from '../formFields';
+import TextLink from '../textLink';
 
 class SigninForm extends Component {
     render() {
@@ -9,7 +10,12 @@ class SigninForm extends Component {
             <form action="" className='sign-in-form'>
                 <FormTitle className='sign-in-form__title' text='Login'></FormTitle>
                 <Field className='sign-in-form__email' placeholder='Enter Email' component={FormInput} name='email' type='email' title="Email" />
-                <Field className='sign-in__password' placeholder='Enter Password' component={FormInput} name='password' type='password' title="Password" />
+                <Field className='sign-in-form__password' placeholder='Enter Password' component={FormInput} name='password' type='password' title="Password" />
+                <Field className='sign-in-form__login' component={FormButton} name='login' type='submit' title="Login" />
+                <div class="sign-in-form__text-links">
+                    <TextLink to="/forgot" text='Forgot Password'/>
+                    <TextLink to="/signup" text='Not a member? Register here'/>
+                </div>
             </form>
         )
     }
