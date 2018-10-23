@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import NewsletterBox from './newsletterBox';
+
 class NewsletterGrid extends Component {
     render() {
         return (
             <div className='newsletter-grid'>
-                Give me content
+                <NewsletterBox date={new Date()}/>
             </div>
         )
     }
