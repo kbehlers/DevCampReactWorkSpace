@@ -1,6 +1,7 @@
 .tab-nav {
     display: grid;
     grid-template-rows: [tabs-start] 5rem [tabs-end content-start] 1fr [content-end];
+    height: 100%;
 
 
     &__tabs{

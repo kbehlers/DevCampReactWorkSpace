@@ -1,0 +1,8 @@
+.newsletter-grid {
+    grid-row: content-start/content-end;
+    
+    display: grid;
+    grid-template-rows: [s box-start] 16rem [box-end archive-start] 1fr [archive-end e];
+    grid-template-columns: [s box-start archive-start] 16rem [box-end archive-end newsletter-start] 1fr [newsletter-end e];
+
+}
