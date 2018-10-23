@@ -2,12 +2,13 @@
     display: grid;
     grid-template-rows: [tabs-start] 5rem [tabs-end content-start] 1fr [content-end];
 
+
     &__tabs{
         grid-row: tabs-start/tabs-end;
         border-bottom: 1px solid $color-gray-E6;
 
         display: grid;
-        grid-template-rows: 1fr;
+        grid-template-rows: [s] 1fr [m] 2fr [e];
         grid-template-columns: repeat(auto-fill, 1fr);
         grid-auto-flow: column;
         justify-items: center;
@@ -18,10 +19,19 @@
 
     }
     &__tab {
+        grid-row: m/e;
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 2rem;
         text-align: center;
         width: 9rem;
+        height: 100%;
+        border-bottom: 2px solid transparent;
+
+    }
+
+    &__active {
+        color: $color-red-BA;
+        border-bottom: 2px solid $color-red-BA;
     }
 }
