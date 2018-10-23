@@ -1,0 +1,12 @@
+.tab-nav {
+    display: grid;
+    grid-template-rows: [tabs-start] 5rem [tabs-end content-start] 1fr [content-end];
+
+    &__tabs{
+        grid-row: tabs-start/tabs-end;
+        background-color: cornflowerblue;
+    }
+    &__tab {
+
+    }
+}
