@@ -13,7 +13,8 @@ export default function (state = INITIAL_STATE, action) {
         const {user} = action.payload;
             return {
                 ...state,
-                user: user
+                authenticated: true,
+                user
             }
     
         default:
