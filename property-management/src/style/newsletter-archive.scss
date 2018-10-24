@@ -2,4 +2,49 @@
     grid-row: archive-start/archive-end;
     grid-column: archive-start/archive-end;
 
+    display: grid;
+    grid-template-rows: [title-start] 2.7rem [title-end items-start] 1fr [items-end];
+
+    &__title {
+        color: $color-red-BA;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.3rem;
+
+        border-bottom: .1rem solid $color-gray-E6;
+        padding-bottom: .4rem;
+    }
+    &__items {
+
+    }
+}
+
+.archive-items {
+    display: grid;
+    row-gap: 1.6rem;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    &__item {
+
+    }
+
+}
+
+.archive-item {
+    display: grid;
+    row-gap: 3px;
+    &__title {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        transition: all .2s ease;
+        &:hover {
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+    }
+    &__date {
+        color: $color-red-BA;
+        font-family: $font-encode-cond;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
 }
