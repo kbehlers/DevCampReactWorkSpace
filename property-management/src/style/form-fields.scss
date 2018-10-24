@@ -1,4 +1,5 @@
-.form-input {
+.form-input,
+.form-textarea {
 
     display: grid;
     grid-template-rows: 1fr;
@@ -31,6 +32,21 @@
     }
 }
 
+
+.form-textarea {
+    resize: none;
+    &__title{
+        align-self: start;
+    }
+    &__input{
+        font-family: $font-encode;
+        font-weight: 400;
+        color: $color-gray-4D;
+        height: 35.5rem;
+        resize: none;
+        padding-top: 1rem;
+    }   
+}
 .form-button {
     
     &__button {
