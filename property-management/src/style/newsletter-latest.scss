@@ -1,0 +1,35 @@
+.newsletter-latest {
+    grid-row: s/e;
+    grid-column: latest-start/latest-end;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: [s] 25.8rem [m] 40.5rem [e];
+    grid-template-columns: [s] 1fr [e];
+
+    & > * {
+        grid-column: s/e;
+    }
+
+    &__title,
+    &__image{
+        justify-self: center;
+        align-self: center;
+    }
+    &__title {
+        grid-row: s/m;
+        z-index: 1;
+
+    }
+    &__image {
+        grid-row: s/m;
+        z-index: -5;
+    }
+    &__body {
+        grid-row: m/e;
+        p{
+
+        }
+    }
+
+}
