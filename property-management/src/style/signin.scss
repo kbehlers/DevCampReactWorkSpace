@@ -5,22 +5,31 @@
 
 .sign-in-form {
     display: grid;
+    grid-template-columns: [s] 1fr [input-start] 629px [input-end] 1fr [e];
     justify-items: center;
 
     &__title {
         width: 100%;
         margin-top: 6.6rem;
+        grid-column: s/e;
     }
     &__email{
         margin-top: 7.7rem;
+        grid-column: input-start/input-end
     }
     &__password{
         margin-top: 4rem;
+        grid-column: input-start/input-end
+
     }
     &__login{
         margin-top: 8.8rem;
+        grid-column: input-start/input-end
+
     }
     &__text-links{
         margin-top: 5.2rem;
+        grid-column: input-start/input-end
+
     }
 }
