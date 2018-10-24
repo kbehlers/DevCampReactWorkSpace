@@ -1,20 +1,44 @@
 .newsletter-box {
+    align-content: center;
     height: 16rem;
     width: 16rem;
-    border: .1rem solid $color-red-BA;
+    border: .15rem solid $color-red-BA;
     border-radius: .5rem;
     color: $color-red-BA;
     display: grid;
+    grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
+    grid-template-columns: 1fr;
     text-align: center;
     justify-items: center;
-    align-content: center;
+    
     &__day {
         font-size: 7rem;
         line-height: 8.1rem;
+        grid-row: s/m;
+        grid-column: 1/-1;
     }
 
     &__month-year {
         font-size: 2rem;
         line-height: 2.3rem;
+        grid-row: m/e;
+        grid-column: 1/-1;
+
+    }
+    &__point {
+        height: 4rem;
+        width: 4rem;
+        background-color: white;
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+        justify-self: right;
+        align-self: center;
+        transform: translateX(50%) rotate(45deg);
+        border-right: .15rem solid $color-red-BA;
+        border-top:  .15rem solid $color-red-BA;
+        border-left: .15rem solid white;
+        border-bottom: .15rem solid white;
+
+
     }
 }
