@@ -18,7 +18,7 @@ export default function (state = INITIAL_STATE, action) {
             }
         case FETCH_NEWSLETTER_ID:
             const newsletterID = action.payload;
-            var newsletterToEdit = {}
+            var newsletterToEdit = {};
             state.newsletters.map(newsletter => {
                 if(newsletter._id == newsletterID) {
                     newsletterToEdit = newsletter;
@@ -28,8 +28,6 @@ export default function (state = INITIAL_STATE, action) {
                 ...state,
                 newsletterToEdit
             }
-
-    
         default:
             return state;
     }
