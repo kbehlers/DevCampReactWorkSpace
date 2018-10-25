@@ -67,7 +67,14 @@ export class FormImage extends Component {
             <div className={`${className} form-image`}>
                 <label className='form-image__title'>{title}</label>
                 <img className='form-image__image' src={imageUrl}></img>
-                <input {...input} type={type}/>
+                <input 
+                    className='form-image__replace' 
+                    type='button' value='Replace'
+                    onClick={
+                        () => document.getElementById('file') ? document.getElementById('file').click() : ''
+                    }
+                    />
+                <input {...input} type={type} style={{display: 'none'}} id='file' name='file' accepts='image/*' value={undefined}/>
             </div>
         )
     }

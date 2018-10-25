@@ -7,6 +7,7 @@
     
     align-items: center;
     width: 100%;
+    justify-content: center;
 
     &__title{
         grid-row: 1/-1;
@@ -45,7 +46,8 @@
 }
 
 .button,
-button {
+button,
+.form-image__replace {
         transition: all .1s ease;
         &:active {
             transform: scale(.95);
@@ -75,14 +77,14 @@ button {
     
     &__button {
         border-radius: 1.6rem;
-    border: 1px solid $color-gray-4D;
-    width: 13rem;
-    height: 2.4rem;
-    background-color: white;
-    
-    font-size: 1.4rem;
-    line-height: 1.7rem;
-    text-align: center;        
+        border: 1px solid $color-gray-4D;
+        width: 13rem;
+        height: 2.4rem;
+        background-color: white;
+        
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;        
     }
 
     &__danger {
@@ -94,16 +96,49 @@ button {
 
 //IMAGE
 .form-image {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: [title-start] 1fr [title-end image-start] 13.7rem [image-end];
+    grid-template: [s] 16rem [e];
+
+    justify-self: start;
+
+    & > * {
+        grid-column: s/e;
+    }
     &__title {
         @include red-title;
         margin-bottom: 2rem;
+        grid-row: title-start/title-end;
     }
     &__image{
         width: 16rem;
         height: 13.7rem;
         border: none;
+        background-color: $color-gray-D8;
+        grid-row: image-start/image-end;
+
+
+    }
+
+    &__replace {
+        z-index: 1;
+        border-radius: 1.6rem;
+        border: 1px solid white;
+        background-color: white;
+
+        color: $color-red-BA;
+        width: 13rem;
+        height: 2.4rem;
+        
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;  
+        
+        grid-row: image-start/image-end;
+    
+        align-self: center;
+        justify-self: center;
+        
     }
     
 
