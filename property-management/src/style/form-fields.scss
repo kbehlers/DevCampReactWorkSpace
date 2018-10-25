@@ -47,6 +47,17 @@
         padding-top: 1rem;
     }   
 }
+
+.button,
+button {
+        transition: all .1s ease;
+        &:active {
+            transform: scale(.95);
+        }
+        &:focus {
+            outline: none;
+        }
+}
 .form-button {
     
     &__button {
