@@ -23,6 +23,6 @@ export function fetchNewsletters() {
     }
     return {
         type: SET_NEWSLETTERS,
-        payload: Response.data
+        payload: response.data
     }
 }
