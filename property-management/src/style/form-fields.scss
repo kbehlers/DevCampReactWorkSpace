@@ -116,6 +116,7 @@ button,
         border: none;
         background-color: $color-gray-D8;
         grid-row: image-start/image-end;
+        object-fit: cover;
 
 
     }
