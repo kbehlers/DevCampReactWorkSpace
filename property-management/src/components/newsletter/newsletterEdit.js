@@ -17,9 +17,15 @@ class EditNewsletter extends Component {
     render() {
         return (
             <div className='new-newsletter'>
-                <NewNewsletterForm onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)} title='Edit Newsletter'/>
+                <NewNewsletterForm  newsletterToEdit={this.props.newsletterToEdit} onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)} formTitle='Edit Newsletter'/>
             </div>
         )
     } 
 }
-export default connect(null, actions)(EditNewsletter);
+function mapStateToProps(state) {
+    const {newsletterToEdit} = state.newsletters;
+    return {
+        newsletterToEdit
+    }
+}
+export default connect(mapStateToProps, actions)(EditNewsletter);

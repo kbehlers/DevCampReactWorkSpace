@@ -15,7 +15,7 @@ class NewNewsletter extends Component {
     render() {
         return (
             <div className='new-newsletter'>
-                <NewNewsletterForm onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)} title='New Newsletter' />
+                <NewNewsletterForm onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)} formTitle='New Newsletter' />
             </div>
         )
     }
