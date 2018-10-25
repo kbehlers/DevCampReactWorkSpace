@@ -40,14 +40,14 @@ export class FormButton extends Component {
     };
 
     render() {
-        const { className, title, input, type, small, danger } = this.props;
+        const { className, title, input, type, small, danger, onClick } = this.props;
         return (
             <div className={`${className} ${small ? 'form-button-small' : 'form-button'}`}>
                 <button className={`
                     ${small ? 'form-button-small' : 'form-button'}__button  
                     ${danger ? 'form-button-small__danger' : ''}
                     `}
-                     
+                    onClick={onClick}
                     type={type} {...input}>
                     {title}
                 </button>
