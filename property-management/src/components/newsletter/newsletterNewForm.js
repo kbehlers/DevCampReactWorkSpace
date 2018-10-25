@@ -14,7 +14,7 @@ class NewNewsletterForm extends Component {
                 <Field className='new-newsletter-form__body' placeholder='Service Request Description (Here)' component={FormTextArea} name='body' type='text' title="Body" />
                 <Field className='new-newsletter-form__submit' small={true} danger={true} component={FormButton} name='submit' type='submit' title="Submit"/>
                 <Field className='new-newsletter-form__cancel' small={true} danger={false} component={FormButton} name='cancel' type="button" title="Cancel" onClick={this.props.onCancel} />
-                <Field className='new-newsletter-form__image' component={FormImage} name='image' type='file ' title="Image" />
+                <Field className='new-newsletter-form__image' component={FormImage} name='image' type='file' title="Image" />
 
             </form>
         )
