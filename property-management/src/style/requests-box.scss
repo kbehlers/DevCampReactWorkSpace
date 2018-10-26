@@ -1,11 +1,9 @@
 .requests-box {
-
     align-content: center;
     height: 16rem;
     width: 16rem;
     border: .15rem solid $color-red-BA;
     border-radius: .5rem;
-    color: $color-red-BA;
     display: grid;
     grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
     grid-template-columns: 1fr;
@@ -42,4 +40,36 @@
 
 
     }
+}
+
+.requests-box-active {
+    background-color: $color-red-BA;
+    border-color: $color-red-BA;
+
+    .requests-box {
+        
+        &__title, 
+        &__count {
+            color: white;
+        }
+        &__point {
+            background-color: $color-red-BA;
+            border-color: $color-red-BA;
+        }
+    }
+}
+
+.requests-box-inactive {
+    border-color: $color-gray-E6;
+
+    .requests-box {
+        &__title, 
+        &__count {
+            color: $color-gray-4D;
+
+        }
+        &__point {
+            display: none;
+        }
+    }   
 }
