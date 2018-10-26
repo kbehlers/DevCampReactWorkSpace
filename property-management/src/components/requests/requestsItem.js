@@ -18,7 +18,14 @@ class RequestsItem extends Component {
                     09/15/1997
                 </div>
                 <Button className='requests-item__move' icon='fas fa-wrench' callback={() => console.log("Trying to move request item")} />
-
+                <div className="requests-item__description">
+                    <img className='requests-item__description-img' src='http://via.placeholder.com/160x94' />
+                    <p className="requests-item__description-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
             </div>
         )
     }
