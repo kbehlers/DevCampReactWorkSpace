@@ -1,0 +1,20 @@
+.requests-grid {
+    justify-content: center;
+    
+    grid-row: content-start/content-end;
+    height: 100%;
+    display: grid;
+    grid-template-rows: [add-start] 4.7rem [add-end s box-start] 16rem [box-end archive-start] 1fr [archive-end] 1fr [e];
+    grid-template-columns: [s box-start archive-start] 16rem [box-end archive-end latest-start] 96rem [latest-end e];
+
+    column-gap: 6.1rem;
+
+    &__button {
+        grid-row: add-start/add-end;
+        grid-column: latest-start/latest-end;
+        justify-self: end;
+        align-self: center;
+        margin-right: 1rem;
+     }
+
+}
