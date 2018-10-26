@@ -1,7 +1,7 @@
 .requests-boxes {
-    background-color: blue;
     grid-row: boxes-start/boxes-end;
     grid-column: boxes-start/boxes-end;
 
-    height: 50rem;
+    display: grid;
+    grid-gap: 1.55rem;
 }
