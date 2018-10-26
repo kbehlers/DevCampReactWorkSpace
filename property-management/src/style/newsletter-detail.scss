@@ -20,4 +20,12 @@
         grid-column: s/e;
         grid-row: 1;
     }
+    &__cancel {
+        grid-row: 1;
+        grid-column: latest-start/latest-end;
+        justify-self: end;
+        align-self: end;
+        margin-right: 1rem;
+        margin-bottom: 1.2rem;
+    }
 }
