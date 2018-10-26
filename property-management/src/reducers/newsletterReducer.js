@@ -28,7 +28,6 @@ export default function (state = INITIAL_STATE, action) {
                 ...state,
                 newsletterToEdit
             }
-        default:
-            return state;
+        default: return state;
     }
 }

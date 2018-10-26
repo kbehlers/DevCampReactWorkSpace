@@ -10,18 +10,17 @@ class NewsletterDetail extends Component {
         this.props.fetchNewsletterWithId(this.props.match.params.id);
     }
     render() {
-        console.log(this.props.newsletterToEdit);
         return (
             <div className='newsletter-detail'>
-                <NewsletterBox />
-                <NewsletterLatest/>
+                <NewsletterBox date={this.props.newsletterToEdit.date}/>
+                <NewsletterLatest {...this.props.newsletterToEdit} />
             </div>
         )
     }
 }
 
 function mapStateToProps(state) {
-    const newsletterToEdit = state.newsletters
+    const {newsletterToEdit} = state.newsletters
     return {newsletterToEdit};
 }
 export default connect(mapStateToProps, actions)(NewsletterDetail);

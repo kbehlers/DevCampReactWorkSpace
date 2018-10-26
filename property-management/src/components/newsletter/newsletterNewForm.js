@@ -8,9 +8,9 @@ class NewNewsletterForm extends Component {
     render() {
         
         const { handleSubmit, formTitle, newsletterToEdit} = this.props;
-        let title = null;
-        let body = null;
-        let imageUrl = null;
+        var title = null;
+        var body = null;
+        var imageUrl = null;
         if(newsletterToEdit) {
             title = newsletterToEdit.title;
             body = newsletterToEdit.body;
