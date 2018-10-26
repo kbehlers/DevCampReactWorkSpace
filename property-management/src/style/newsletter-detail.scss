@@ -1,4 +1,23 @@
 .newsletter-detail {
     grid-row: content-start/content-end;
     grid-column: content-start/content-end;
+
+    justify-content: center;
+    
+    grid-row: content-start/content-end;
+    height: 100%;
+    display: grid;
+    grid-template-rows: [title-start] 9rem [title-end add-start] 4.7rem [add-end s box-start] 16rem [box-end] 1fr [e];
+    grid-template-columns: [s box-start] 16rem [box-end latest-start] 96rem [latest-end e];
+
+    column-gap: 6.1rem;
+    &__title {
+        grid-row: title-start/title-end;
+        grid-column: 1/-1;
+
+        width: 100%;
+        margin-top: 6.6rem;
+        grid-column: s/e;
+        grid-row: 1;
+    }
 }
