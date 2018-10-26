@@ -6,11 +6,11 @@ export class FormInput extends Component {
     };
 
     render() {
-        const { className, title, input, type, placeholder } = this.props;
+        const { className, title, input, type, placeholder, editValue } = this.props;
         return (
             <div className={`${className} form-input`}>
                 <label className='form-input__title'>{title}</label>
-                <input className='form-input__input' type={type} {...input} placeholder={placeholder}></input>
+                <input className='form-input__input' type={type} {...input} placeholder={placeholder} value={editValue ? editValue : input.value}></input>
             </div>
         )
     }
@@ -22,11 +22,11 @@ export class FormTextArea extends Component {
     };
 
     render() {
-        const { className, title, input, type, placeholder } = this.props;
+        const { className, title, input, type, placeholder, editValue } = this.props;
         return (
             <div className={`${className} form-textarea`}>
                 <label className='form-textarea__title'>{title}</label>
-                <textarea className='form-textarea__input' type={type} {...input} placeholder={placeholder}>
+                <textarea className='form-textarea__input' type={type} {...input} placeholder={placeholder} value={editValue ? editValue : input.value}>
                     
                 </textarea>
             </div>
