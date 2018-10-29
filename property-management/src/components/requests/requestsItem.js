@@ -24,8 +24,15 @@ class RequestsItem extends Component {
             this.setState({height: 0})
         }
     }
+
+    handleStatus = () => {
+        const { _id, status } = this.props;
+        this.props.changeStatus({_id, status}, () => {
+            this.props.fetchRequests();
+        });
+    }
     render() {
-        const { _id, title, body, date, imageUrl, status} = this.props;
+        const { title, body, date, imageUrl } = this.props;
         const options =  {year: '2-digit', month: 'numeric', day: 'numeric'}
         const parsedDate = new Date(date);
         return (
@@ -43,7 +50,7 @@ class RequestsItem extends Component {
                 <div className="requests-item__date">
                     {parsedDate.toLocaleString('en-US', options)}
                 </div>
-                <Button className='requests-item__move' icon='fas fa-wrench' callback={() => this.props.changeStatus({_id, status})} />
+                <Button className='requests-item__move' icon='fas fa-wrench' callback={() => this.handleStatus()} />
                 <div className="requests-item__description">
                     <AnimateHeight
                         duration={300}
