@@ -3,29 +3,26 @@ import {
     FETCH_NEWSLETTER_ID
 } from '../actions/types';
 
+import axios from 'axios';
+import {ROOT_URL} from '../config';
+
 export function fetchNewsletters() {
-    const response = {
-        data: [
-            {
-                _id: '115',
-                title: 'Happy Holidays',
-                body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsum cupiditate, aperiam iure molestias exercitationem accusantium cumque sunt expedita quibusdam totam. Enim doloremque pariatur vero dignissimos, repellat cum atque eos!`,
-                date: new Date(),
-                imageUrl: 'http://via.placeholder.com/960x258'
-            },
-            {
-                _id: '935',
-                title: 'Second Newsletter',
-                body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsum cupiditate, aperiam iure molestias exercitationem accusantium cumque sunt expedita quibusdam totam. Enim doloremque pariatur vero dignissimos, repellat cum atque eos!`,
-                date: new Date(),
-                imageUrl: 'http://via.placeholder.com/960x258'
-            }
-        ]
+    
+    return function(dispatch) {
+        var token = localStorage.getItem('token');
+        const headers = {headers: {authorization: token}}
+        axios.get(`${ROOT_URL}/newsletters`, headers)
+        .then(response => {
+            dispatch( {
+                type: SET_NEWSLETTERS,
+                payload: response.data
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
-    return {
-        type: SET_NEWSLETTERS,
-        payload: response.data
-    }
+    
 }
 
 export function fetchNewsletterWithId(id) {
