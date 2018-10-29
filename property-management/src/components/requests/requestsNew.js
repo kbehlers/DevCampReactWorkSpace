@@ -9,7 +9,7 @@ class NewRequest extends Component {
         //     //TODO perform post to backend
         //     console.log('trying to submit to backend');
         // }
-        this.props.createNewRequest(this.props._id, {}, () => {
+        this.props.createNewRequest(this.props._id, fields, () => {
             this.props.history.push('/dashboard');
         })
         
