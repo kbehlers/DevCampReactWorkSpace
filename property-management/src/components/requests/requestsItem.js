@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+import { ROOT_URL} from '../../config';
 import Icon from '../icon';
 import Button from '../button';
 
@@ -24,20 +24,23 @@ class RequestsItem extends Component {
         }
     }
     render() {
+        const { _id, title, body, date, imageUrl, status} = this.props;
+        const options =  {year: '2-digit', month: 'numeric', day: 'numeric'}
+        const parsedDate = new Date(date);
         return (
             <div id='requests-item' className='requests-item'>
                 <Icon className="requests-item__icon" icon='fas fa-exclamation-triangle' />
                 <div className="requests-item__title">
                     <div className='requests-item__title__text'>
-                        My door fell off
+                        {title}
                     </div>
                     <Icon className='requests-item__title__arrow' icon='fas fa-sort-down' callback={()=>this.toggleDropdown()} />
                 </div>
                 <div className="requests-item__tenant-unit">
-                    Max - Unit 115
+                     - Unit 
                 </div>
                 <div className="requests-item__date">
-                    09/15/1997
+                    {parsedDate.toLocaleString('en-US', options)}
                 </div>
                 <Button className='requests-item__move' icon='fas fa-wrench' callback={() => console.log("Trying to move request item")} />
                 <div className="requests-item__description">
@@ -46,11 +49,9 @@ class RequestsItem extends Component {
                         height={this.state.height}
                     >
                         <div className="item-description">
-                            <img className='item-description__img' src='http://via.placeholder.com/160x94' />
+                            <img className='item-description__img' src={`${ROOT_URL}/${imageUrl}`} />
                             <p className="item-description__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                {body}
                                 </p>
                         </div>
                     </AnimateHeight>
