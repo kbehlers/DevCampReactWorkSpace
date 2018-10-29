@@ -9,29 +9,48 @@
         grid-column: icon-s/icon-e;
         grid-row: s/e;
         justify-self: center;
-        background-color: cornflowerblue;
+
+        font-size: 3rem;
     }
     &__title {
         grid-column: title-s/title-e;
         grid-row: title-s/title-e;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.3rem;
     }
     &__tenant-unit {
         grid-column: title-s/title-e;
         grid-row: tenant-s/tenant-e;
+
+        font-family: $font-encode-cond;
+        color: $color-red-BA;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+
     }
     &__arrow {
         grid-column: arrow-s/arrow-e;
         grid-row: title-s/title-e;
+
+        color: $color-gray-4D;
+        font-size: 3rem;
     }
     &__date {
         grid-column: date-s/date-e;
         grid-row: s/e;
         text-align: right;
+
+        font-size: 1.4rem;
+        line-height: 1.7rem;
     }
     &__move {
         grid-column: date-s/date-e;
         grid-row: s/e;
         display: none;
+
+
     }
     &__description {
         grid-column: s/e;
@@ -45,7 +64,8 @@
         
     }
     &__description-text {
-
+        font-size: 1.4rem;
+        line-height: 1.7rem;
     }
 
 }
