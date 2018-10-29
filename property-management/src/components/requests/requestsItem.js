@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux';
+import * as actions from '../../actions';
 import { ROOT_URL} from '../../config';
 import Icon from '../icon';
 import Button from '../button';
@@ -42,7 +43,7 @@ class RequestsItem extends Component {
                 <div className="requests-item__date">
                     {parsedDate.toLocaleString('en-US', options)}
                 </div>
-                <Button className='requests-item__move' icon='fas fa-wrench' callback={() => console.log("Trying to move request item")} />
+                <Button className='requests-item__move' icon='fas fa-wrench' callback={() => this.props.changeStatus({_id, status})} />
                 <div className="requests-item__description">
                     <AnimateHeight
                         duration={300}
@@ -61,4 +62,6 @@ class RequestsItem extends Component {
         )
     }
 }
+
+RequestsItem = connect(null, actions)(RequestsItem);
 export default RequestsItem;
