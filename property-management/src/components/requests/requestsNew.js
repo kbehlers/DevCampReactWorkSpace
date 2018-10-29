@@ -5,11 +5,14 @@ import * as actions from '../../actions';
 
 class NewRequest extends Component {
     onSubmit = (fields) => {
-        // if(button == 'submit') {
-        //     //TODO perform post to backend
-        //     console.log('trying to submit to backend');
-        // }
-        this.props.createNewRequest(this.props._id, fields, () => {
+        const {title, body, image} = fields;
+
+        var formData = new FormData();
+        formData.append('title', title);
+        formData.append('body', body);
+        formData.append('image', image);
+
+        this.props.createNewRequest(this.props._id, formData, () => {
             this.props.history.push('/dashboard');
         })
         
