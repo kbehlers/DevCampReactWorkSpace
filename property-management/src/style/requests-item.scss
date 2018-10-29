@@ -1,12 +1,21 @@
 .requests-item {
     display: grid;
-    grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 1rem [tenant-e e description-s] 1fr [description-e];
+    grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 1fr [tenant-e e];
     grid-template-columns: [icon-s] 10rem [icon-e s title-s] minmax(4rem, 1fr) [title-e arrow-s] 6.8rem [arrow-e date-s] 10rem [date-e e] 6rem;
 
     align-items: center;
     padding: .6rem 0rem;
+
+    transition: all .3s ease;
     &:hover {
         background-color: $color-gray-F8;
+        .requests-item__move {
+            transform: translateX(0); 
+            opacity: 1 !important;
+        }
+        .requests-item__date {
+            transform: translateX(-10rem); 
+        }
     }
     &__icon {
         grid-column: icon-s/icon-e;
@@ -58,30 +67,38 @@
 
         font-size: 1.4rem;
         line-height: 1.7rem;
+        transition: all .3s ease;
     }
     &__move {
         grid-column: date-s/date-e;
         grid-row: s/e;
-        display: none;
+        justify-self: end;
+        // display: none;
+        transition: all .3s ease;
+        transform: translateX(100px);
+        opacity: 0;
 
 
     }
     &__description {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
         grid-column: s/e;
-        grid-row: description-s/description-e;
-
+    }
+    .item-description {
         display: grid;
         grid-column-gap: 4rem;
         grid-auto-flow: column;
+        margin-top: 1.4rem;
+        margin-bottom: 1.5rem;
+        &__img {
+            object-fit: cover;
+        }
+        &__text {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
     }
-    &__description-img {
-        
-    }
-    &__description-text {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-    }
+}
 
+.bg-F8 {
+    background-color: $color-gray-F8;
 }
