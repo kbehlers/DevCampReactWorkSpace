@@ -15,6 +15,7 @@ class NewRequest extends Component {
         this.props.createNewRequest(this.props._id, formData, () => {
             this.props.history.push('/dashboard');
         })
+        // merged
         
     }
     onCancel = (fields) => {
