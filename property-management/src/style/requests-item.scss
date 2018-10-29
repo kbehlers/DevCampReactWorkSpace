@@ -1,10 +1,13 @@
 .requests-item {
     display: grid;
-    grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 3.4rem [tenant-e e description-s] 14.7rem [description-e];
+    grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 1rem [tenant-e e description-s] 1fr [description-e];
     grid-template-columns: [icon-s] 10rem [icon-e s title-s] minmax(4rem, 1fr) [title-e arrow-s] 6.8rem [arrow-e date-s] 10rem [date-e e] 6rem;
 
     align-items: center;
-
+    padding: .6rem 0rem;
+    &:hover {
+        background-color: $color-gray-F8;
+    }
     &__icon {
         grid-column: icon-s/icon-e;
         grid-row: s/e;
@@ -64,6 +67,8 @@
 
     }
     &__description {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         grid-column: s/e;
         grid-row: description-s/description-e;
 
