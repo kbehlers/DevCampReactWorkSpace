@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import * as actions from '../../actions';
 import NewNewsletterForm from './newsletterNewForm';
 
 class NewNewsletter extends Component {
     onSubmit = (fields) => {
-        // if(button == 'submit') {
-        //     //TODO perform post to backend
-        //     console.log('trying to submit to backend');
-        // }
+        const {title, body, image} = fields;
+
+        var formData = new FormData();
+        formData.append('title', title);
+        formData.append('body', body);
+        formData.append('image', image);
+
+        this.props.createNewNewsletter(this.props._id, formData, () => {
+            this.props.history.push('/dashboard');
+        })
         this.props.history.push('/dashboard');
     }
     onCancel = (fields) => {
@@ -27,4 +35,4 @@ class NewNewsletter extends Component {
         )
     }
 }
-export default NewNewsletter;
+export default connect(null, actions)(NewNewsletter);
