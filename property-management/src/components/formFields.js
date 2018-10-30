@@ -6,11 +6,11 @@ export class FormInput extends Component {
     };
 
     render() {
-        const { className, title, input, type, placeholder, editValue } = this.props;
+        const { className, title, input, type, placeholder } = this.props;
         return (
             <div className={`${className} form-input`}>
                 <label className='form-input__title'>{title}</label>
-                <input className='form-input__input' type={type} {...input} placeholder={placeholder} value={editValue ? editValue : input.value}></input>
+                <input className='form-input__input' type={type} {...input} placeholder={placeholder}></input>
             </div>
         )
     }
@@ -22,11 +22,11 @@ export class FormTextArea extends Component {
     };
 
     render() {
-        const { className, title, input, type, placeholder, editValue } = this.props;
+        const { className, title, input, type, placeholder } = this.props;
         return (
             <div className={`${className} form-textarea`}>
                 <label className='form-textarea__title'>{title}</label>
-                <textarea className='form-textarea__input' type={type} {...input} placeholder={placeholder} value={editValue ? editValue : input.value}>
+                <textarea className='form-textarea__input' type={type} {...input} placeholder={placeholder}>
                     
                 </textarea>
             </div>
@@ -71,11 +71,11 @@ export class FormImage extends Component {
     }
 
     render() {
-        const { className, title, input, type, imageUrl } = this.props;
+        const { className, title, input, type } = this.props;
         return (
             <div className={`${className} form-image`}>
                 <label className='form-image__title'>{title}</label>
-                <img  id='newsletter-new-image' className='form-image__image' src={imageUrl}></img>
+                <img  id='newsletter-new-image' className='form-image__image'></img>
                 <input 
                     className='form-image__replace' 
                     type='button' 
