@@ -15,7 +15,7 @@ class RequestsItem extends Component {
         }
     }
     toggleDropdown = () => {
-        var element = document.getElementById('requests-item')
+        var element = document.getElementById(`${this.props._id}-requests-item`)
         if(this.state.height === 0) {
             element.classList.add('bg-F8');
             this.setState({height: 'auto'})
@@ -32,7 +32,7 @@ class RequestsItem extends Component {
         });
     }
     render() {
-        const { title, body, date, imageUrl, status} = this.props;
+        const { title, body, date, imageUrl, status, _id} = this.props;
         const options =  {year: '2-digit', month: 'numeric', day: 'numeric'}
         const parsedDate = new Date(date);
         var moveButtonIcon ='fas fa-wrench';
@@ -46,7 +46,7 @@ class RequestsItem extends Component {
         }
         
         return (
-            <div id='requests-item' className='requests-item'>
+            <div id={`${_id}-requests-item`} className='requests-item'>
                 <Icon className="requests-item__icon" icon={mainIcon} />
                 <div className="requests-item__title">
                     <div className='requests-item__title__text'>
