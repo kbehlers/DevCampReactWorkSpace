@@ -57,9 +57,8 @@ export function createNewNewsletter(formData, success) {
 
 export function editNewsletter(itemId, formData, success) {
     const token = localStorage.getItem('token');
-    const id = itemId
     return function() {
-        axios.post(`${ROOT_URL}/newsletters/edit/${id}`, formData, {
+        axios.post(`${ROOT_URL}/newsletter/edit/${itemId}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 authorization: token
