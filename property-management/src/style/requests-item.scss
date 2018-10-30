@@ -85,12 +85,17 @@
     }
     .item-description {
         display: grid;
+        grid-template-columns: [image-start] 15rem [image-end] 1fr;
+        grid-template-rows: 10rem;
         grid-column-gap: 4rem;
         grid-auto-flow: column;
         margin-top: 1.4rem;
         margin-bottom: 1.5rem;
         &__img {
-            object-fit: cover;
+            object-fit: contain;
+            grid-column: image-start/image-end;
+            height: 100%;
+            width: 100%;
         }
         &__text {
             font-size: 1.4rem;
