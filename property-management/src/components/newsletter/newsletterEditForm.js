@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 import { FormTitle } from '../formTitle';
 import {FormInput, FormButton, FormTextArea, FormImage} from '../formFields';
+import {ROOT_URL} from '../../config';
  
 class EditNewsletterForm extends Component { 
 
@@ -20,7 +21,7 @@ class EditNewsletterForm extends Component {
                 <Field className='new-newsletter-form__body' placeholder={fieldTwoPlaceholder} component={FormTextArea} name='body' type='text' title={fieldTwoTitle}  />
                 <Field className='new-newsletter-form__submit' small={true} danger={true} component={FormButton} name='submit' type='submit' title="Submit"/>
                 <Field className='new-newsletter-form__cancel' small={true} danger={false} component={FormButton} name='cancel' type="button" title="Cancel" onClick={this.props.onCancel} />
-                <Field className='new-newsletter-form__image' component={FormImage} name='image' type='file' title="Image"/>
+                <Field className='new-newsletter-form__image' component={FormImage} name='image' type='file' title="Image" imageUrl={this.props.initialValues.imageUrl ? `${ROOT_URL}/${this.props.initialValues.imageUrl}` : 'http://via.placeholder.com/150x137'}/>
 
             </form>
         )
