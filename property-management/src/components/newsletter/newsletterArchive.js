@@ -4,12 +4,13 @@ import {connect} from 'react-redux';
 import history from '../../history';
 
 export function ArchiveItem({title, date, _id, callback}) {
-    let options =  {year: '2-digit', month: 'numeric', day: 'numeric'}
+    const options =  {year: '2-digit', month: 'numeric', day: 'numeric'}
+    const parsedDate = new Date(date);
     return (
         <div className="archive-item archive-items__item">
             <a onClick={() => {callback(_id)}} className="archive-item__title">{title}</a>
             <div className="archive-item__date">
-                {date.toLocaleString('en-US', options)}
+                {parsedDate.toLocaleString('en-US', options)}
             </div>
 
         </div>
