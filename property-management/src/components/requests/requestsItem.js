@@ -6,6 +6,7 @@ import Icon from '../icon';
 import Button from '../button';
 
 import AnimateHeight from 'react-animate-height';
+import RequireAdmin from '../auth/requireAdmin';
 
 class RequestsItem extends Component {
     constructor() {
@@ -60,7 +61,9 @@ class RequestsItem extends Component {
                 <div className="requests-item__date">
                     {parsedDate.toLocaleString('en-US', options)}
                 </div>
-                <Button className='requests-item__move' icon={moveButtonIcon} callback={() => this.handleStatus()} />
+                <RequireAdmin>
+                    <Button className='requests-item__move' icon={moveButtonIcon} callback={() => this.handleStatus()} />
+                </RequireAdmin>
                 <div className="requests-item__description">
                     <AnimateHeight
                         duration={300}
