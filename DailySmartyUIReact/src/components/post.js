@@ -23,7 +23,7 @@ class Post extends Component {
             return (<div className="post_link" key={index}>
                 <div className="post-link__box"></div>
                 <div className="post-link__link">
-                    <a href={post_link.link_url}>Useful link #{index+1}</a>
+                    <a href={post_link.link_url}>Useful link #{index + 1}</a>
                 </div>
             </div>
             )
@@ -49,14 +49,16 @@ class Post extends Component {
                         {this.renderTopics()}
                     </div>
                     <div className="result-post__title">
-                       <a
-                        href={this.props.url_for_post}
-                        onMouseEnter={() => this.setState({ height: 70})}
-                        onMouseLeave={() => this.setState({ height: 0})}
-                        >{this.props.title}</a> 
+                        <a
+                            href={this.props.url_for_post}
+                            onMouseEnter={() => this.setState({ height: 70 })}
+                            onMouseLeave={() => this.setState({ height: 0 })}
+                        >
+                            {this.props.title}
+                        </a>
                     </div>
                     <AnimateHeight
-                        duration={500} 
+                        duration={500}
                         height={this.state.height}
                     >
                         <div className="result-post__links">
