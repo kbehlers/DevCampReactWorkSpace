@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
-class NavBar extends Component {
+import {connect} from 'react-redux';
+class Navbar extends Component {
     render() {
         return (
             <div className='navbar'>
-                
+                {
+                    this.props.navbarLinks.map((link, index) => {
+                        return (
+                            <a key={index} className='navbar__link' onClick={() => console.log('trying to switch tab')}>
+                                {link.title}
+                            </a>
+                        )
+                    })
+                }
             </div>
         )
     }
 }
-export default NavBar;
+function mapStateToProps(state) {
+    const {navbarLinks} = state.headerNavbar;
+    return {
+        navbarLinks
+    }
+}
+Navbar = connect(mapStateToProps)(Navbar);
+export default Navbar;
