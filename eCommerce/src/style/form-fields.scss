@@ -1,0 +1,39 @@
+.form-input {
+
+    display: grid;
+    grid-gap: .65rem;
+
+    &__label, &__input {
+        padding-left: 2rem;
+    }
+
+    &__label {
+        font-size: 14px;
+        color: #808080;
+    }
+    &__input {
+        box-sizing: border-box;
+        height: 3.9rem;
+        width: 42.6rem;
+        border: 1px solid #E6E6E6;
+        border-radius: 20px;
+        font-size: 1.8;
+        color: #333333;
+        font-size: 14px;
+    }
+}
+
+.form-button {
+    &__button {
+        height: 38px;
+        width: 243px;
+        border-radius: 20px;
+        background-color: #00CB79;
+        font-size: 1.6rem;
+        color: white;
+
+        &:focus {
+            outline: none;
+        }
+    }   
+}

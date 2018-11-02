@@ -4,6 +4,7 @@
 @import './auth/signup.scss';
 
 @import './page-title.scss';
+@import './form-fields.scss';
 
 
 html {
@@ -16,4 +17,10 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+}
+
+body {
+    font-family: "Open Sans";
+    color: #808080;
+
 }
