@@ -109,9 +109,9 @@
 
         transition: all .1s ease-in-out;
 
-        // &:hover {
-        //     transform: scale(0.97);
-        // }
+        &:hover {
+            background-color: #00A462;
+        }
 
         &:active {
             transform: scale(0.95);
