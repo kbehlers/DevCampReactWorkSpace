@@ -1,0 +1,39 @@
+.shop-search-bar {
+    input {
+        
+        font-size: 20px;
+
+        height: 40px;
+        width: 100px;
+        border: 1px solid #E6E6E6;
+        border-radius: 20px;
+        color: #808080;
+
+        &::placeholder {
+            color: #CCCCCC;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.search-bar-grid {
+    display: grid;
+    grid-template-rows: [s] 1fr [e];
+    grid-template-columns: 20px [s] 20px [icon-e] 1fr [e];
+     &__icon {
+        grid-row: s/e;
+        grid-column: s/e;
+        font-size: 18px;
+        z-index: 10;
+
+        align-self: center; 
+     }
+     &__input {
+        grid-row: s/e;
+        grid-column: 1/e;
+        padding-left: 50px;
+        
+    }
+}
