@@ -1,0 +1,20 @@
+.review-form {
+    display: grid;
+    &__products{
+        grid-column: 1/-1;
+    }
+    &__line{
+        grid-row: line-s/line-e;
+        border-top: 1px solid #ccc;
+        grid-column: 1/-1;
+    }
+    &__back{
+        
+        grid-row: buttons-s/buttons-e;
+        grid-column: back-s/back-e;
+    }
+    &__proceed{
+        grid-row: buttons-s/buttons-e;
+        grid-column: proceed-s/proceed-e;
+    }
+}
