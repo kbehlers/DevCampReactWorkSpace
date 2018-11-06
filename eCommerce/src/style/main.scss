@@ -13,6 +13,7 @@
 @import './shop//shop-search-bar.scss';
 @import './quantity.scss';
 @import './green-price-tag.scss';
+@import './shop/shop-product.scss';
 
 
 html {
@@ -28,7 +29,7 @@ html {
 }
 
 body {
-    font-family: "Open Sans";
+    font-family: "Encode Sans";
     color: #808080;
 
 }
