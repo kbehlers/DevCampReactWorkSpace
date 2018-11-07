@@ -8,8 +8,8 @@ class ShopProduct extends Component {
     handleAddToCart = () => {
         let element = document.getElementById('shop-cart');
         if(element.classList.contains('cart-hidden')) {
-            const { _id, title, description, price, belongsTo } = this.props;
-            this.props.addCartProduct({ _id, title, description, price, belongsTo });
+            const { _id, title, description, price, belongsTo, imageUrl } = this.props;
+            this.props.addCartProduct({ _id, title, description, price, belongsTo, imageUrl });
         }
         
         element.classList.toggle('cart-hidden');
