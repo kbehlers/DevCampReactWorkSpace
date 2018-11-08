@@ -4,13 +4,21 @@ import {
   NavLink,
   BrowserRouter
 } from "react-router-dom";
-import Home from "./components/home";
-import Blog from "./components/blog";
-import Contact from "./components/contact";
+import Player from "./components/player";
+import Playlist from "./components/playlist";
+import Transcript from "./components/transcript";
 
 
 class App extends Component {
   render() {
+    const videoJsOptions = {
+      autoplay: true,
+      controls: true,
+      sources: [{
+        src: 'https://vjs.zencdn.net/v/oceans.mp4',
+        type: 'video/mp4'
+      }]
+    }
     return (
       <BrowserRouter>
         <div>
@@ -21,9 +29,9 @@ class App extends Component {
             <li><NavLink to="/Contact">Contact</NavLink></li>
           </ul> */}
           <div className="content">
-            <Route exact path="/" component={Home} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/contact" component={Contact} />
+        <Route exact path="/" render={() => <Player { ...videoJsOptions } />} />
+            <Route path="/" component={Playlist} />
+            <Route path="/" component={Transcript} />
           </div>
         </div>
       </BrowserRouter>
@@ -31,4 +39,7 @@ class App extends Component {
   }
 }
 
-export default App;;
+export default App;
+
+
+
