@@ -1,0 +1,32 @@
+body {
+    font-size: 62.5%;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: [page-start] 1fr [page-middle] 1fr [page-end];
+    grid-template-rows: [page-start] 2fr [page-middle] 1fr [page-end];
+}
+
+.binding {
+    font-size: 1.6rem;
+    justify-self: center;
+    align-self: center;
+    grid-column: page-start/page-middle;
+    grid-row: page-start/page-middle;
+}
+.list-wrapper {
+    min-height: 10rem;
+    height: 1fr;
+}
+.todo-list {
+    font-size: 1.6rem;
+}
+.button-toggle {
+    font-size: 1.6rem;
+    justify-self: center;
+    width: 85%;
+    max-width: 50vw;
+    grid-column: page-start/page-end;
+    grid-row: page-middle/page-end;
+}
